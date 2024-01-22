@@ -50,7 +50,7 @@ return {
           default = '{ 1, 1 }',
           description = [[
             A scale factor to apply to the UV coordinates used to sample textures.  The scale is not
-            affected by `uvOffset`.  This can be used to map UV coordinates to a sub-rectangle of a
+            affected by `uvShift`.  This can be used to map UV coordinates to a sub-rectangle of a
             texture atlas, or repeat a texture multiple times across a surface.  Can be a `Vec2`,
             table of numbers, or a single number which gets assigned to both axes. Can be toggled in
             shaders using the `uvTransform` flag, which defaults to `true`.
