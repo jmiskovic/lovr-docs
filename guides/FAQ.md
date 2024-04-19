@@ -7,7 +7,11 @@ Yes, LÖVR will automatically use a fake headset system that you can control wit
 if there isn't any VR hardware detected.
 
 You can also set the `t.modules.headset` flag to false in `lovr.conf` to disable VR completely and
-develop a traditional 3D desktop application.
+develop a traditional 3D desktop application. With the desktop VR simulator disabled, there is no
+built-in camera control. The [FPS Controls](https://lovr.org/docs/dev/Flatscreen/FPS_Controls)
+example can be a starting point.
+
+https://lovr.org/docs/dev/Texture:newReadback
 
 Keep in mind that LÖVR is primarily designed for creating VR experiences, which have their own
 design considerations.  This means that LÖVR does not prioritize features common in other
@@ -18,6 +22,12 @@ touchscreens, etc.
 
 Yes, `lovr.system` has functions for keyboard and mouse input, and there are input events like
 `lovr.keypressed`, `lovr.mousemoved`, etc.
+
+> How can I take a screenshot?
+
+To save the screenshot to disk, you first have to render the frame into a texture using your own
+pass for off-screen rendering. A complete example is given in the documentation of the [texture
+readback](https://lovr.org/docs/dev/Texture:newReadback).
 
 > How is this project related to LÖVE?
 
@@ -36,3 +46,4 @@ LÖVR should work on any AR headset that supports OpenXR and Vulkan.  More detai
 
 See `lovr.headset.getPassthrough` and `lovr.headset.setPassthrough` for managing how virtual content
 blends with the real world.
+
